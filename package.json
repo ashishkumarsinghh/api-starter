@@ -1,0 +1,27 @@
+{
+  "name": "api-starter",
+  "version": "1.0.0",
+  "description": "Starter boilerplate code to create an api server using mongo, graphql, express. ",
+  "main": "index.js",
+  "repository": "git@github.com:ashishkumarsinghh/api-starter.git",
+  "author": "ashish kumar singh <ashishkumarsinghh@outlook.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^15.0.0",
+    "graphql-tag": "^2.10.3",
+    "mongoose": "^5.9.9"
+  },
+  "scripts": {
+    "start": "standard --fix && nodemon --watch ./src esm ./src/index.js",
+    "test": "standard",
+    "fixlinterrors": "standard --fix"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3",
+    "standard": "^14.3.3"
+  }
+}
