@@ -1,16 +1,16 @@
 // Setup environment Variables
-const dotenv = require("dotenv");
-dotenv.config();
+import { config } from "dotenv";
+config();
 
-const express = require("express");
-const cors = require("cors");
-const { ApolloServer } = require("apollo-server-express");
-const resolvers = require("./graphql/resolvers/bookResolver");
-const typeDefs = require("./graphql/schemas/booksSchema");
+import express from "express";
+import cors from "cors";
+import { ApolloServer } from "apollo-server-express";
+import rootValue from "./graphql/resolvers/";
+import typeDefs from "./graphql/schemas/";
 
 const server = new ApolloServer({
   typeDefs,
-  resolvers,
+  rootValue,
 });
 
 const app = express();

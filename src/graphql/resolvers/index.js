@@ -1,4 +1,4 @@
-const rootValue = {
-  hello: () => 'Hello There !'
-}
-module.exports = rootValue
+import bookResolver from "./bookResolver";
+import userResolver from "./userResolver";
+const rootValue = [bookResolver, userResolver];
+export default rootValue;

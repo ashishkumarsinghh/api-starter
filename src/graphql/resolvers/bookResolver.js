@@ -1,7 +1,7 @@
-const books = require("./bookStore");
+const books = require('./bookStore')
 const resolvers = {
   Query: {
-    books: () => books,
-  },
-};
-module.exports = resolvers;
+    books: () => books
+  }
+}
+module.exports = resolvers
