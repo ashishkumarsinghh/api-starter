@@ -4,10 +4,14 @@ dotenv.config();
 
 const express = require("express");
 const cors = require("cors");
-const graphqlHTTP = require("express-graphql");
+const { ApolloServer } = require("apollo-server-express");
+const resolvers = require("./graphql/resolvers/bookResolver");
+const typeDefs = require("./graphql/schemas/booksSchema");
 
-const rootValue = require("./graphql/resolvers/index");
-const schema = require("./graphql/schema/index");
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+});
 
 const app = express();
 
@@ -16,8 +20,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to api-starter.");
 });
 
-app.use("/graphql", graphqlHTTP({ schema, rootValue }));
-
+server.applyMiddleware({ app });
 app.listen(process.env.PORT, (err) => {
   if (err) console.error(err);
   else console.log("Server runing.");

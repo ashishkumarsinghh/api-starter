@@ -1,4 +1,4 @@
 const rootValue = {
-  hello: () => "Hello There !",
-};
-module.exports = rootValue;
+  hello: () => 'Hello There !'
+}
+module.exports = rootValue
