@@ -7,7 +7,7 @@
   "author": "ashish kumar singh <ashishkumarsinghh@outlook.com>",
   "license": "MIT",
   "dependencies": {
-    "apollo-server-express": "^2.12.0",
+    "apollo-server-express": "^2.14.2",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "esm": "^3.2.25",
